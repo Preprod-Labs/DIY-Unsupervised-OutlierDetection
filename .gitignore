@@ -1,5 +1,1 @@
 __pycache__
-isolation_forest_model.pkl
-local_outlier_factor_model.pkl
-one_class_svm_model.pkl
-preprocessed_data.csv
