@@ -1,5 +1,25 @@
-## DIY - Unsupervised Learning
+# DIY - Unsupervised Learning
+
 This is the Unsupervised Learning Algorithms branch.
+
+To Learn more about the project using your favorite LLM, [click here](prompts.md)
+
+This project uses **Python 3.10.8**.
+
+## Table of Contents
+
+1. [DIY - Unsupervised Learning](#diy---unsupervised-learning)
+2. [Unsupervised Learning Algorithms](#unsupervised-learning-algorithms)
+   - [Isolation Forest](#isolation-forest)
+   - [Local Outlier Factor (LOF)](#local-outlier-factor-lof)
+   - [One-Class SVM](#one-class-svm)
+3. [Problem Definition](#problem-definition)
+4. [Data Definition](#data-definition)
+   - [Mock Data Generation](#mock-data-generation)
+5. [Directory Structure](#directory-structure)
+6. [Program Flow](#program-flow)
+7. [Steps to Run](#steps-to-run)
+
 
 ## Unsupervised Learning Algorithms
 ### Isolation Forest
@@ -15,18 +35,37 @@ One-Class SVM is an anomaly detection technique designed for situations where on
 The business operates in the financial sector, offering credit card services to its customers. The goal is to use the Unsupervised Learning Algorithm to detect fraudulent cards based on historical transaction data.
 
 ## Data Definition
-Mock data for learning purposes with features: `transaction_id`, `customer_id`, `transaction_date`, `transaction_amount`, `merchant_category`, `payment_method`, `transaction_location`, `account_age`, `num_transactions`, `fraud_label`, `transaction_time`, `transaction_type`, `device_used`, and `customer_country`.
+Mock data for learning purposes with features: transaction_id, transaction_date, transaction_amount, merchant_category, card_type, transaction_location, cardholder_age, cardholder_gender, transaction_description, account_balance, calander_income.
+Note: The dataset consists of 1000 samples, which may lead to potential overfitting. This could adversely affect evaluation metrics such as the silhouette score and Davies-Bouldin index, as these metrics may not accurately reflect clustering quality in a small dataset. In real-life scenarios, larger and more diverse datasets would provide a more accurate representation of transaction behavior, leading to more reliable performance metrics for fraud detection models.
 
-Note: The dataset consists of 1000 samples, which may lead to potential **overfitting**. This could adversely affect evaluation metrics such as the silhouette score and Davies-Bouldin index, as these metrics may not accurately reflect clustering quality in a small dataset. In real-life scenarios, larger and more diverse datasets would provide a more accurate representation of transaction behavior, leading to more reliable performance metrics for fraud detection models.
+### Mock Data Generation
+This repository contains a dataset generated using the [Mockaroo](https://mockaroo.com/) site, designed for educational and learning purposes. The dataset simulates financial transactions with various attributes, useful for practicing data analysis, machine learning, and fraud detection.
 
-## Directory Structure
--	**Code/:** Contains all the scripts for data ingestion, transformation, loading, evaluation, model training, inference, manual prediction, and web application.
--	**Data/:** Contains the raw mock data.
+### Dataset Features
+
+The dataset includes the following features related to financial transactions:
+
+- **transaction_id**: Unique identifier for each transaction.
+- **transaction_date**: Date when the transaction occurred (e.g., 23-04-2024).
+- **transaction_amount**: The amount of money involved in the transaction (e.g., 7277).
+- **merchant_category**: Category of the merchant where the transaction took place (e.g., Entertainment, Restaurant, Travel).
+- **card_type**: The type of card used for the transaction (e.g., Amex, Visa).
+- **transaction_location**: Location where the transaction occurred (e.g., Bengaluru, Jaipur).
+- **cardholder_age**: Age of the cardholder (e.g., 9, 65, 57).
+- **cardholder_gender**: Gender of the cardholder (e.g., Male, Female, Other).
+- **transaction_description**: A description of the transaction (e.g., "Fusce congue, diam id ornare imperdiet...").
+- **account_balance**: The balance available in the account at the time of the transaction (e.g., 31454, 96536).
+- **calendar_income**: The annual income of the cardholder (e.g., 159045, 50525, 148395).
+
 ### Data Splitting
 -	**Training Samples:** 600
 -	**Testing Samples:** 250
 -	**Validation Samples:** 75
 -	**Supervalidation Samples:** 75
+
+## Directory Structure
+-	**Code/:** Contains all the scripts for data ingestion, transformation, loading, evaluation, model training, inference, manual prediction, and web application.
+-	**Data/:** Contains the raw mock data.
 
 ## Program Flow
 1.	**db_utils:** This code snippet contains utility functions to connect to PostgreSQL database, create tables, and insert data into them.[`db_utils.py`]
@@ -39,11 +78,22 @@ Note: The dataset consists of 1000 samples, which may lead to potential **overfi
 8.	**Web Application:** This code snippet creates a web app using Streamlit to train, evaluate, and predict fraudulent credit card using three different unsupervised learning models: IsolationForest, LocalOutlierFactor, and OneClassSVM. [`app.py`]
 
 ## Steps to Run
-1.	Install the necessary packages:
-```bash
-pip install -r requirements.txt`
-```
-2.	Run the Streamlit web application:
-```bash
-streamlit run Code/app.py
-```
+1. **Ensure the databases (MongoDB, PostgreSQL) are running:**
+
+    - **PostgreSQL Setup:**
+     1. Install PostgreSQL: Follow the installation guide based on your operating system from the official [PostgreSQL Documentation](https://www.postgresql.org/docs/).
+     2. Open **pgAdmin** and connect to your PostgreSQL server.
+     3. Create a database `Mock_Data` in **pgAdmin**:
+     4. The table transaction_data will be created automatically by the db_utils.create_postgresql_table function when you run the data ingestion script in streamlit to train model.
+     5. Connect to the database (`Mock_Data`) and verify the setup.
+
+    - **MongoDB Setup:**
+     1. Install MongoDB: Follow the installation guide for your operating system from the official [MongoDB Documentation](https://docs.mongodb.com/manual/installation/).
+     2. Open **MongoDB Compass** and connect to your MongoDB instance.
+     3. Create a database named **"1"** in MongoDB Compass.
+     4. `x_train` and other collections(like `x_val`, `x_superval`, `y_train` etc.) will get stored in the database **"1"**.
+
+
+2. **Install the necessary packages:** `pip install -r requirements.txt`
+
+3.	**Run the Streamlit web application:** `streamlit run Code/app.py`

@@ -3,23 +3,24 @@
     # Developer details: 
         # Name: Harshita Jangde, Prachi Tavse, Khushboo Mittal, and Tanisha Priya
         # Role: Architects
-        # Code ownership rights: Mohini T and Vansh R
     # Version:
         # Version: V 1.0 (20 September 2024)
             # Developers: Harshita Jangde, Prachi Tavse, Khushboo Mittal, and Tanisha Priya
             # Unit test: Pass
             # Integration test: Pass
      
-     # Description: This code snippet creates a web app to train, evaluate, and predict if credit card is fraudulent according
-     # to Transaction behaviour using three different Outlier Detection models (Unsupervised Learning):
-     # IsolationForest, LocalOutlierFactor, One-Class SVM.
+     # Description: This code snippet creates a web app to train, evaluate, and predict if credit card is fraudulent according to Transaction behaviour using
+    # three different Outlier Detection models (Unsupervised Learning): IsolationForest, LocalOutlierFactor, One-Class SVM.
 
 # CODE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     # Dependency: 
         # Environment:     
-            # Python 3.11.5
-            # Streamlit 1.36.0
+            # Python 3.10.8
+            # Streamlit 1.22.0
+            
+            
+#to run: streamlit run Code/app.py
 
 
 import streamlit as st  # Used for creating the web app
