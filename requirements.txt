@@ -7,3 +7,7 @@ scikit-learn==1.4.2
 gensim==4.3.1
 sqlalchemy==2.0.10
 pymongo==4.5.0
+psycopg2==2.9.10
+
+# If psycopg2 gives issues after installing try:
+# pip install psycopg2 --no-binary psycopg2
