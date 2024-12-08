@@ -1,7 +1,6 @@
 # META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         # Version: V 1.0 (20 September 2024)
-            # Developers: Harshita Jangde and Prachi Tavse
             # Unit test: Pass
             # Integration test: Pass
      

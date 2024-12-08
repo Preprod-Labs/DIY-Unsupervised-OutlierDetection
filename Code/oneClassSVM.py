@@ -1,7 +1,6 @@
 # META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
         # Version: V 1.0 (11 October 2024)
-            # Developers: Khushboo Mittal
             # Unit test: Pass
             # Integration test: Pass
      

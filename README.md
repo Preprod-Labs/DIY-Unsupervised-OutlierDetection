@@ -85,6 +85,9 @@ Note: The dataset consists of 1000 samples, which may lead to potential overfitt
 8.	**Web Application:** This code snippet creates a web app using Streamlit to train, evaluate, and predict fraudulent credit card using three different unsupervised learning models: IsolationForest, LocalOutlierFactor, and OneClassSVM. [`app.py`]
 
 ## Steps to Run
+
+P.S: As per your installation choices, the username and password for the databases can be set or disabled , hence ensure you have set / disabled passwords as per the requirement of this DIY
+
 1. **Ensure the databases (MongoDB, PostgreSQL) are running:**
 
     - **PostgreSQL Setup Using pgAdmin:**
