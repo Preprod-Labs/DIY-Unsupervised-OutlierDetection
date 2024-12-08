@@ -1,9 +1,5 @@
 # META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-    # Developer details: 
-        # Name: Khushboo Mittal
-        # Role: Architects
-    # Version:
         # Version: V 1.0 (11 October 2024)
             # Developers: Khushboo Mittal
             # Unit test: Pass

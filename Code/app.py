@@ -1,9 +1,5 @@
 # META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-    # Developer details: 
-        # Name: Harshita Jangde, Prachi Tavse, Khushboo Mittal, and Tanisha Priya
-        # Role: Architects
-    # Version:
         # Version: V 1.0 (20 September 2024)
             # Developers: Harshita Jangde, Prachi Tavse, Khushboo Mittal, and Tanisha Priya
             # Unit test: Pass

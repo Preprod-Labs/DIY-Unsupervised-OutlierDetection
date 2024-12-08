@@ -1,11 +1,5 @@
-# META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-    # Developer details: 
-        # Name: Tanisha Priya
-        # Role: Architects
-    # Version:
+# META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ß
         # Version: V 1.0 (11 October 2024)
-            # Developers: Tanisha Priya
             # Unit test: Pass
             # Integration test: Pass
      
